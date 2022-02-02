@@ -46,7 +46,7 @@ public class TextBoxTests {
       $(".modal-content").shouldBe(visible);
       $(".modal-title").shouldHave(text("Thanks for submitting the form"));
       $(".modal-body").shouldBe(text("Label"),text("Values"));
-      $(".table-responsive").shouldBe(text("Kris Ushakova"),text("test@test.ru"),text("Female"),text("8962352658"),text("10 July, 1998"),text("History"),text("Reading"),text("new.txt"),text("test"),text("NCR Delhi"));
+      $(".table-responsive").shouldBe(text("Kris Ushakova"),text("test@test.ru"),text("Female"),text("8962352658"),text("10 July, 1998"),text("History"),text("Reading"),text("YErxp2OGreQ.jpg"),text("test"),text("NCR Delhi"));
 
 
 
