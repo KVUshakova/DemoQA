@@ -29,12 +29,12 @@ public class TextBoxTests {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOption("1998");
         $(".react-datepicker__month-select").selectOption("July");
-        $("[aria-label=Choose Thursday, July 9th, 1998]").click();
+        $(".react-datepicker__day--010:not(.react-datepicker__day--outside-month)").click(); //подсмотрела
         $("#subjectsContainer").click();
         $("#subjectsInput").setValue("his").pressEnter();
         $("label[for=hobbies-checkbox-2]").click();
-        $("input#uploadPicture").uploadFile(new File("C:/Users/kristina.ushakova/Desktop/Hwnevkmpgw8.jpg"));
-        $("#currentAddress").setValue("test").scrollTo();
+       File uploadFromClasspath = $("input#uploadPicture").uploadFromClasspath("YErxp2OGreQ.jpg");//подсмотрела
+       $("#currentAddress").setValue("test").scrollTo();
         $("#state").click();
         $("#react-select-3-input").append("NCR").pressEnter();
         $("#city").click();
@@ -46,7 +46,7 @@ public class TextBoxTests {
       $(".modal-content").shouldBe(visible);
       $(".modal-title").shouldHave(text("Thanks for submitting the form"));
       $(".modal-body").shouldBe(text("Label"),text("Values"));
-      $(".table-responsive").shouldBe(text("Kris Ushakova"),text("test@test.ru"),text("Female"),text("8962352658"),text("14 July 1998"),text("History"),text("Reading"),text("Hwnevkmpgw8.jpg"),text("test"),text("NCR Delhi"));
+      $(".table-responsive").shouldBe(text("Kris Ushakova"),text("test@test.ru"),text("Female"),text("8962352658"),text("10 July, 1998"),text("History"),text("Reading"),text("new.txt"),text("test"),text("NCR Delhi"));
 
 
 
