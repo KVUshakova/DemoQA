@@ -36,17 +36,16 @@ public class TextBoxTests {
        File uploadFromClasspath = $("input#uploadPicture").uploadFromClasspath("YErxp2OGreQ.jpg");//подсмотрела
        $("#currentAddress").setValue("test").scrollTo();
         $("#state").click();
-        $("#react-select-3-input").append("NCR").pressEnter();
+        $("#react-select-3-input").setValue("NCR").pressEnter();
         $("#city").click();
-        $("#react-select-4-input").append("Delhi").pressEnter();
+        $("#react-select-4-input").setValue("Delhi").pressEnter();
         $("#submit").click();
 
 
       //assert
       $(".modal-content").shouldBe(visible);
       $(".modal-title").shouldHave(text("Thanks for submitting the form"));
-      $(".modal-body").shouldBe(text("Label"),text("Values"));
-      $(".table-responsive").shouldBe(text("Kris Ushakova"),text("test@test.ru"),text("Female"),text("8962352658"),text("10 July, 1998"),text("History"),text("Reading"),text("YErxp2OGreQ.jpg"),text("test"),text("NCR Delhi"));
+      $(".table-responsive").shouldBe(text("Kris Ushakova"),text("test@test.ru"),text("Female"),text("8962352658"),text("10 July,1998"),text("History"),text("Reading"),text("YErxp2OGreQ.jpg"),text("test"),text("NCR Delhi"));
 
 
 
